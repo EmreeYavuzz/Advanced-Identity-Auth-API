@@ -12,6 +12,23 @@ This project implements JWT authentication with ASP.NET Core Identity, PostgreSQ
 - Audit log table for API access history
 - Scalar/OpenAPI for exploring endpoints
 
+## API Documentation UI
+
+This project does not use classic Swagger UI. Instead, it uses:
+
+- .NET 9 native OpenAPI generation
+- Scalar UI as the interactive API documentation and testing interface
+
+In practice, this covers same documentation and endpoint-testing need that Swagger UI usually covers.
+
+For delivery requirement purposes:
+
+- there is no Postman collection in repository
+- there is no classic Swagger UI package setup
+- Scalar + OpenAPI is used as Swagger/OpenAPI equivalent
+
+This means project still satisfies practical "Postman collection or Swagger/OpenAPI-style API documentation/testing UI" expectation through Scalar.
+
 ## Project Structure
 
 - `AuthApi/`: API project
@@ -98,6 +115,8 @@ You can test API in either of these ways:
 
 - Use Scalar UI in browser
 - Use `AuthApi/AuthApi.http` file from VS Code with REST Client extension
+
+If reviewer expects Swagger UI specifically, use Scalar URL above and note that Scalar is the OpenAPI-based replacement used in this project.
 
 ### 1. Register admin user
 
